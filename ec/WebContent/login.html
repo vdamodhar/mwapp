@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<script>
+	function fnLogin() {
+		if (document.getElementById("Username").value == "") {
+			alert("Enter user name");
+			}
+		else if(document.getElementById("Password").value == ""){
+				alert("Enter password");
+			}
+		else{
+			alert("suc");
+			window.location.href = "index.html";			
+			return false;
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<div style="background: black; color: yellow; border: 1px solid gray;">
+		<h1 style="text-align: center; font-family: verdana;">Login</h1>
+	</div>
+	<div style="background: gray; border: 1px solid gray; height: 300px">
+		<form
+			style="padding: 80px 95px; font-family: verdana; font-size: 15px;">
+			Username:<br> <input type="text" id="Username"> <br>
+			<br> Password:<br> <input type="text" id="Password"><br>
+			<br>
+			<button type="submit" id="loginbtn" onclick="return fnLogin()">Log
+				in</button>
+			<button type="submit" id="cancelbtn" onclick="fnCancel()">Cancel</button>
+		</form>
+	</div>
+</body>
+</html>
